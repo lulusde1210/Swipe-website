@@ -1,4 +1,5 @@
 :root {
+    --standar-width: 1144px;
     /* font-family */
     --body-font: 'Roboto', sans-serif;
     --heading-font: 'Anek Telugu', sans-serif;
@@ -38,12 +39,17 @@
 }
 
 body {
-    font: var(--body-font);
+    font-family: var(--body-font);
     color: var(--text-dark);
     width: 100%;
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
+    background-color: #00d4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
@@ -53,7 +59,6 @@ h1 {
     width: 100%;
     letter-spacing: -1px;
     line-height: var(--h2-height);
-    margin: 0;
 }
 
 h2 {
@@ -116,6 +121,7 @@ a {
     color: var(--purple-1);
     font-weight: 500;
     transition: color 0.25s ease;
+    letter-spacing: 0.5px;
 }
 
 a:hover {
@@ -145,15 +151,13 @@ subtitle2 {
 .btn-primary {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--btn-size);
-    letter-spacing: 1.25px;
+    letter-spacing: 0.5px;
     font-weight: bold;
     border-radius: 50px;
     border: none;
     background-color: var(--primary-accent);
     color: var(--text-light);
     transition: all 0.25s ease;
-    position: relative;
-
 }
 
 .btn-primary:hover {
@@ -171,13 +175,13 @@ subtitle2 {
     color: var(--primary-accent);
     transition: color 0.25s ease;
     background-color: transparent;
-    position: relative;
 }
 
 .btn-secondary:hover {
     cursor: pointer;
     opacity: 0.75;
 }
+
 
 .withicon {
     display: flex;
@@ -191,4 +195,36 @@ subtitle2 {
 
 .withicon:hover>img {
     transform: translateX(8px)
+}
+
+
+/* navbar  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    max-width: var(--standar-width);
+    padding: 0 var(--spacing-md)
+}
+
+.navbar .links a {
+    margin: 0 var(--spacing-sm);
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar .navbar-btn {
+    background-color: rgba(250, 250, 250, 0.25);
+
+}
+
+.navbar-btn:hover {
+    background-color: rgba(250, 250, 250, 0.5);
+
 }
