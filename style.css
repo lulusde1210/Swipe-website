@@ -45,10 +45,17 @@
 }
 
 /* GENERAL ELEMENTS */
+
+html,
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--body-font);
     color: var(--text-dark);
-    width: 100%;
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
